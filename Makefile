@@ -30,7 +30,7 @@ $(OBJ)/%.o: $(SRC)/%.c
 run: $(EXE)
 	@$(EXE)
 
-watch:
+hot:
 	@find $(SRC) -type f | entr -c make run
 
 clean:
@@ -38,4 +38,4 @@ clean:
 
 -include $(DEPS)
 
-.PHONY: all run watch clean
+.PHONY: all run hot clean
